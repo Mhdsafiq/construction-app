@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Aatzy Build — Construction Management</title>
+    <meta name="description" content="One platform for construction companies — Construction Tech, Inventory, HR, and Assets — delivering transparency, efficiency, and accountability from site to stock.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Quantico:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- ===== APP SHELL (Mobile Frame) ===== -->
+    <div class="app-shell" id="appShell">
+
+        <!-- ===== ONBOARDING CONTAINER ===== -->
+        <div class="onboarding-container" id="onboardingContainer">
+            
+            <!-- Page Indicators -->
+            <div class="page-indicators" id="pageIndicators">
+                <span class="indicator active" data-page="0"></span>
+                <span class="indicator" data-page="1"></span>
+                <span class="indicator" data-page="2"></span>
+                <span class="indicator" data-page="3"></span>
+            </div>
+
+            <!-- Skip Button -->
+            <button class="skip-btn" id="skipBtn">Skip</button>
+
+            <!-- Swipeable Pages Wrapper -->
+            <div class="pages-wrapper" id="pagesWrapper">
+
+                <!-- ===== PAGE 1: Hero ===== -->
+                <div class="onboarding-page page-1" id="page-0">
+                    <div class="page-content">
+                        <div class="page-image-wrapper hero-image-wrapper">
+                            <img src="assets/onboarding_hero.png" alt="Aatzy Build Dashboard" class="page-image" id="heroImage">
+                        </div>
+                        <div class="page-text">
+                            <div class="logo-badge">
+                                <svg class="logo-icon" viewBox="0 0 40 40" fill="none">
+                                    <rect width="40" height="40" rx="10" fill="#F5A623"/>
+                                    <path d="M10 28V14h4v14h-4zm8-10v10h4V18h-4zm8-6v16h4V12h-4z" fill="white"/>
+                                </svg>
+                                <span class="logo-text">AATZY BUILD</span>
+                            </div>
+                            <h1 class="page-title">Money, Material, Manpower & Assets <span class="highlight">All in One Platform</span></h1>
+                            <p class="page-description">One platform for construction companies — Construction Tech, Inventory, HR, and Assets — delivering transparency, efficiency, and accountability from site to stock.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===== PAGE 2: Features ===== -->
+                <div class="onboarding-page page-2" id="page-1">
+                    <div class="page-content">
+                        <div class="page-image-wrapper">
+                            <img src="assets/onboarding_features.png" alt="Features Overview" class="page-image">
+                        </div>
+                        <div class="page-text">
+                            <h1 class="page-title">Everything you need to run projects, people, and resources <span class="highlight">in one place.</span></h1>
+                            <div class="feature-chips">
+                                <div class="feature-chip">
+                                    <div class="chip-icon" style="background: #008EFF;">
+                                        <svg viewBox="0 0 24 24" fill="white" width="16" height="16"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/></svg>
+                                    </div>
+                                    <div class="chip-text">
+                                        <strong>Construction Tech</strong>
+                                        <span>Monitor projects, assign tasks</span>
+                                    </div>
+                                </div>
+                                <div class="feature-chip">
+                                    <div class="chip-icon" style="background: #FABB18;">
+                                        <svg viewBox="0 0 24 24" fill="white" width="16" height="16"><path d="M20 2H4c-1.1 0-2 .9-2 2v3.01c0 .72.43 1.34 1 1.69V20c0 1.1 1.1 2 2 2h14c.9 0 2-.9 2-2V8.7c.57-.35 1-.97 1-1.69V4c0-1.1-.9-2-2-2zm-5 12H9v-2h6v2zm5-7H4V4h16v3z"/></svg>
+                                    </div>
+                                    <div class="chip-text">
+                                        <strong>Inventory & Procurement</strong>
+                                        <span>Control stock, automate alerts</span>
+                                    </div>
+                                </div>
+                                <div class="feature-chip">
+                                    <div class="chip-icon" style="background: #0E9B65;">
+                                        <svg viewBox="0 0 24 24" fill="white" width="16" height="16"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                                    </div>
+                                    <div class="chip-text">
+                                        <strong>HR Management</strong>
+                                        <span>Attendance, payroll, oversight</span>
+                                    </div>
+                                </div>
+                                <div class="feature-chip">
+                                    <div class="chip-icon" style="background: #FE8E48;">
+                                        <svg viewBox="0 0 24 24" fill="white" width="16" height="16"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/></svg>
+                                    </div>
+                                    <div class="chip-text">
+                                        <strong>Asset Management</strong>
+                                        <span>Track usage, schedule maintenance</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===== PAGE 3: Inventory/Productivity ===== -->
+                <div class="onboarding-page page-3" id="page-2">
+                    <div class="page-content">
+                        <div class="page-image-wrapper">
+                            <img src="assets/onboarding_inventory.png" alt="Inventory Management" class="page-image">
+                        </div>
+                        <div class="page-text">
+                            <h1 class="page-title">Boost productivity with <span class="highlight">seamless construction inventory</span></h1>
+                            <div class="benefit-cards">
+                                <div class="benefit-card">
+                                    <div class="benefit-icon">
+                                        <svg viewBox="0 0 24 24" fill="#F5A623" width="22" height="22"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                                    </div>
+                                    <div>
+                                        <h3>Zero Manual Errors</h3>
+                                        <p>Automated stock updates eliminate paperwork and mistakes.</p>
+                                    </div>
+                                </div>
+                                <div class="benefit-card">
+                                    <div class="benefit-icon">
+                                        <svg viewBox="0 0 24 24" fill="#F5A623" width="22" height="22"><path d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4V7zm-1-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+                                    </div>
+                                    <div>
+                                        <h3>Boost Productivity</h3>
+                                        <p>Digitise projects, purchases, logistics & workforce in one platform.</p>
+                                    </div>
+                                </div>
+                                <div class="benefit-card">
+                                    <div class="benefit-icon">
+                                        <svg viewBox="0 0 24 24" fill="#F5A623" width="22" height="22"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+                                    </div>
+                                    <div>
+                                        <h3>Complete Visibility</h3>
+                                        <p>Track every task, cost, and resource in real-time across all sites.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===== PAGE 4: Get Started ===== -->
+                <div class="onboarding-page page-4" id="page-3">
+                    <div class="page-content">
+                        <div class="page-image-wrapper">
+                            <img src="assets/onboarding_getstarted.png" alt="Get Started" class="page-image">
+                        </div>
+                        <div class="page-text">
+                            <h1 class="page-title">Smarter Projects. <span class="highlight">Seamless Operations.</span></h1>
+                            <p class="page-description">Stay on top of your construction projects and inventory. Ensure real-time updates, faster decision-making, and smoother workflows across your entire business.</p>
+                            <div class="feature-list-mini">
+                                <div class="feature-list-item">
+                                    <span class="feature-dot" style="background:#008EFF;"></span>
+                                    Project Tracking
+                                </div>
+                                <div class="feature-list-item">
+                                    <span class="feature-dot" style="background:#FABB18;"></span>
+                                    Inventory Control
+                                </div>
+                                <div class="feature-list-item">
+                                    <span class="feature-dot" style="background:#0E9B65;"></span>
+                                    Purchasing Made Simple
+                                </div>
+                                <div class="feature-list-item">
+                                    <span class="feature-dot" style="background:#FE8E48;"></span>
+                                    Labour & Workforce
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Navigation -->
+            <div class="bottom-nav" id="bottomNav">
+                <button class="nav-btn next-btn" id="nextBtn">
+                    <span class="btn-text">Next</span>
+                    <svg class="btn-arrow" viewBox="0 0 24 24" fill="white" width="20" height="20"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- ===== LOGIN PAGE ===== -->
+        <div class="login-container" id="loginContainer">
+            <div class="login-bg-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+            <div class="login-content">
+                <div class="login-header">
+                    <div class="login-logo">
+                        <svg class="login-logo-icon" viewBox="0 0 50 50" fill="none">
+                            <rect width="50" height="50" rx="14" fill="#F5A623"/>
+                            <path d="M12 36V18h5v18h-5zm10-12v12h5V24h-5zm10-8v20h5V16h-5z" fill="white"/>
+                        </svg>
+                    </div>
+                    <h1 class="login-title">Welcome Back</h1>
+                    <p class="login-subtitle">Sign in to manage your construction projects</p>
+                </div>
+                <form class="login-form" id="loginForm">
+                    <div class="input-group">
+                        <label class="input-label" for="email">Email or Phone</label>
+                        <div class="input-wrapper">
+                            <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                            <input type="text" id="email" placeholder="Enter your email or phone" autocomplete="email" required>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label class="input-label" for="password">Password</label>
+                        <div class="input-wrapper">
+                            <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                                <path d="M7 11V7a5 5 0 0110 0v4"/>
+                            </svg>
+                            <input type="password" id="password" placeholder="Enter your password" autocomplete="current-password" required>
+                            <button type="button" class="toggle-password" id="togglePassword" aria-label="Toggle password visibility">
+                                <svg class="eye-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                </svg>
+                                <svg class="eye-closed" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="display:none;">
+                                    <path d="M17.94 17.94A10.07 10.07 0 0112 20c-7 0-11-8-11-8a18.45 18.45 0 015.06-5.94M9.9 4.24A9.12 9.12 0 0112 4c7 0 11 8 11 8a18.5 18.5 0 01-2.16 3.19m-6.72-1.07a3 3 0 11-4.24-4.24"/>
+                                    <line x1="1" y1="1" x2="23" y2="23"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="login-extras">
+                        <label class="remember-me">
+                            <input type="checkbox" id="rememberMe">
+                            <span class="checkmark"></span>
+                            Remember me
+                        </label>
+                        <a href="#" class="forgot-password" id="forgotPassword">Forgot Password?</a>
+                    </div>
+                    <button type="submit" class="login-btn" id="loginBtn">
+                        <span>Sign In</span>
+                        <svg viewBox="0 0 24 24" fill="white" width="18" height="18"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+                    </button>
+                </form>
+                <div class="login-divider">
+                    <span>or continue with</span>
+                </div>
+                <div class="social-login">
+                    <button class="social-btn" id="googleLogin" aria-label="Sign in with Google">
+                        <svg viewBox="0 0 24 24" width="20" height="20">
+                            <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/>
+                            <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                            <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                            <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                        </svg>
+                        Google
+                    </button>
+                    <button class="social-btn" id="phoneLogin" aria-label="Sign in with Phone">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20">
+                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                            <line x1="12" y1="18" x2="12.01" y2="18"/>
+                        </svg>
+                        Phone
+                    </button>
+                </div>
+                <p class="signup-prompt">Don't have an account? <a href="#" id="signupLink">Sign Up</a></p>
+            </div>
+        </div>
+
+        <!-- ===== PROFILE COMPLETION PAGE ===== -->
+        <div class="profile-container" id="profileContainer">
+            <div class="login-content">
+                <div class="profile-header">
+                    <button class="back-btn" id="backToLoginBtn" aria-label="Go back">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                            <line x1="19" y1="12" x2="5" y2="12"></line>
+                            <polyline points="12 19 5 12 12 5"></polyline>
+                        </svg>
+                    </button>
+                    <div class="logo-text-inline">
+                        <span class="logo-white">Aatzy</span><span class="logo-orange">Build</span>
+                    </div>
+                </div>
+                
+                <div class="profile-title-section">
+                    <h1 class="login-title">Complete Your Profile</h1>
+                    <p class="login-subtitle">Tell us a bit about yourself</p>
+                </div>
+                
+                <form class="login-form" id="profileForm">
+                    <div class="input-group">
+                        <div class="input-wrapper simple-input">
+                            <input type="text" id="fullName" placeholder="Full Name" required>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-wrapper simple-input">
+                            <input type="email" id="profileEmail" placeholder="Email Address" required>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-wrapper simple-input">
+                            <input type="text" id="username" placeholder="Username" required>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-wrapper simple-input">
+                            <input type="text" id="companyName" placeholder="Company Name" required>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <div class="input-wrapper phone-input-wrapper">
+                            <div class="country-code-select">
+                                <span class="selected-code">+91</span>
+                                <svg class="dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </div>
+                            <div class="phone-divider"></div>
+                            <input type="tel" id="phoneNumber" placeholder="9087786231" required>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="login-btn" id="profileSubmitBtn" style="margin-top: 12px;">
+                        <span>Continue</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- ===== PROJECTS DASHBOARD ===== -->
+        <div class="projects-container" id="projectsContainer">
+            <!-- Top Bar -->
+            <div class="projects-topbar">
+                <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open menu">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22">
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="12" x2="16" y2="12"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+                <h1 class="topbar-title">Projects</h1>
+                <button class="notification-btn" id="notificationBtn" aria-label="Notifications">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="22" height="22">
+                        <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                        <path d="M13.73 21a2 2 0 01-3.46 0"></path>
+                    </svg>
+                    <span class="notif-dot"></span>
+                </button>
+            </div>
+
+            <!-- Search & Filter -->
+            <div class="projects-search-row">
+                <div class="search-input-box">
+                    <input type="text" id="projectSearch" placeholder="Search">
+                    <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </div>
+                <button class="filter-btn" id="filterBtn" aria-label="Filter">
+                    <svg viewBox="0 0 24 24" fill="white" width="18" height="18">
+                        <path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Empty State -->
+            <div class="projects-empty" id="projectsEmpty">
+                <div class="empty-icon-wrap">
+                    <svg viewBox="0 0 64 64" fill="none" width="64" height="64">
+                        <rect x="8" y="16" width="48" height="36" rx="4" fill="#2A2D3E" stroke="#3D4055" stroke-width="2"/>
+                        <rect x="8" y="16" width="48" height="10" rx="4" fill="#3D4055"/>
+                        <path d="M20 38h24M20 46h16" stroke="#4A4D60" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <p class="empty-text">No projects found.</p>
+            </div>
+
+            <!-- Bottom Add Button -->
+            <div class="projects-bottom">
+                <button class="add-project-btn" id="addProjectBtn">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+                    <span>Add Project</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- ===== SIDEBAR DRAWER ===== -->
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+        <nav class="sidebar-drawer" id="sidebarDrawer">
+            <div class="sidebar-header">
+                <p class="sidebar-tagline">Build smart. <span>Track better</span></p>
+                <button class="sidebar-close" id="sidebarClose" aria-label="Close menu">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="sidebar-scroll">
+                <!-- Main nav items -->
+                <ul class="sidebar-nav">
+                    <li class="nav-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                        <span>Dashboard</span>
+                    </li>
+                    <li class="nav-item active">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+                        <span>Projects</span>
+                    </li>
+                    <li class="nav-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+                        <span>Warehouse</span>
+                    </li>
+                    <li class="nav-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        <span>Tasks</span>
+                    </li>
+                    <li class="nav-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                        <span>Material Indent</span>
+                    </li>
+
+                    <!-- Purchases Section -->
+                    <li class="nav-section-title">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                        <span>Purchases</span>
+                    </li>
+                    <li class="nav-item sub-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                        <span>Purchase Order</span>
+                    </li>
+                    <li class="nav-item sub-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                        <span>PO Bills</span>
+                    </li>
+                    <li class="nav-item sub-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                        <span>Expenses</span>
+                    </li>
+
+                    <!-- Stocks Hub Section -->
+                    <li class="nav-section-title">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+                        <span>Stocks Hub</span>
+                    </li>
+                    <li class="nav-item sub-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18"><circle cx="12" cy="12" r="10"/><path d="M8 12l2 2 4-4"/></svg>
+                        <span>Stocks</span>
+                    </li>
+                    <li class="nav-item sub-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+                        <span>Field Items Usage</span>
+                    </li>
+                    <li class="nav-item sub-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+                        <span>Field Items</span>
+                    </li>
+
+                    <!-- Standalone items -->
+                    <li class="nav-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                        <span>Pending Action</span>
+                    </li>
+
+                    <!-- Transportation Section -->
+                    <li class="nav-section-title">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                        <span>Transportation</span>
+                    </li>
+                    <li class="nav-item sub-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                        <span>Logistics</span>
+                    </li>
+                    <li class="nav-item sub-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                        <span>Vehicles</span>
+                    </li>
+                    <li class="nav-item sub-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18"><circle cx="12" cy="12" r="10"/><path d="M16 12l-4 4-4-4M12 8v8"/></svg>
+                        <span>Issue Stock</span>
+                    </li>
+
+                    <!-- Admin Section -->
+                    <li class="nav-section-title">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                        <span>Admin</span>
+                    </li>
+                    <li class="nav-item sub-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                        <span>Labours</span>
+                    </li>
+                    <li class="nav-item sub-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                        <span>Vendors</span>
+                    </li>
+
+                    <!-- Attendance Section -->
+                    <li class="nav-section-title">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                        <span>Attendance</span>
+                    </li>
+                    <li class="nav-item sub-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <span>Locations</span>
+                    </li>
+                    <li class="nav-item sub-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18"><path d="M16 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M22 11l-5 5-2.5-2.5"/></svg>
+                        <span>Mark Attendance</span>
+                    </li>
+                    <li class="nav-item sub-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18"><rect x="2" y="3" width="20" height="18" rx="2"/><line x1="8" y1="7" x2="8" y2="7.01"/><line x1="12" y1="7" x2="12" y2="7.01"/><line x1="16" y1="7" x2="16" y2="7.01"/></svg>
+                        <span>My Attendance</span>
+                    </li>
+                    <li class="nav-item sub-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18"><rect x="2" y="3" width="20" height="18" rx="2"/><line x1="2" y1="9" x2="22" y2="9"/><line x1="12" y1="3" x2="12" y2="21"/></svg>
+                        <span>Centralized Attendance</span>
+                    </li>
+                    <li class="nav-item sub-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                        <span>Apply Leaves</span>
+                    </li>
+                    <li class="nav-item sub-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                        <span>Leave Requests</span>
+                    </li>
+
+                    <!-- CRM Section -->
+                    <li class="nav-section-title">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                        <span>CRM</span>
+                    </li>
+                    <li class="nav-item sub-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                        <span>Leads</span>
+                    </li>
+                    <li class="nav-item sub-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18"><rect x="2" y="3" width="20" height="18" rx="2"/><line x1="8" y1="7" x2="8" y2="7.01"/><line x1="12" y1="7" x2="12" y2="7.01"/><line x1="16" y1="7" x2="16" y2="7.01"/></svg>
+                        <span>Activities</span>
+                    </li>
+                    <li class="nav-item sub-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18"><path d="M16 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M22 11l-5 5-2.5-2.5"/></svg>
+                        <span>Follow-ups</span>
+                    </li>
+                    <li class="nav-item sub-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+                        <span>Settings</span>
+                    </li>
+
+                    <!-- Bottom standalone items -->
+                    <li class="nav-divider"></li>
+                    <li class="nav-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+                        <span>Company Details</span>
+                    </li>
+                    <li class="nav-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                        <span>Profile</span>
+                    </li>
+                </ul>
+
+                <!-- Logout button -->
+                <button class="sidebar-logout" id="sidebarLogout">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+                    <span>Logout</span>
+                </button>
+
+                <!-- Version -->
+                <div class="sidebar-version">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                    <div class="version-text">
+                        <span class="version-label">Version</span>
+                        <span class="version-number">v1.0.3</span>
+                    </div>
+                    <span class="version-dot"></span>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
