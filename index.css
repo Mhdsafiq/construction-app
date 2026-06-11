@@ -5,15 +5,15 @@
 
 
 :root {
-  --bg: #0B0D1A;
-  --bg-card: #141627;
-  --bg-el: #1C1F35;
-  --bg-el2: #242740;
-  --border: rgba(255,255,255,0.07);
-  --border2: rgba(255,255,255,0.12);
-  --primary: #F5A623;
-  --primary-d: #D4891A;
-  --primary-glow: rgba(245,166,35,0.18);
+  --bg: #041421;
+  --bg-card: #021C30;
+  --bg-el: #0A2D4A;
+  --bg-el2: #10416A;
+  --border: rgba(255,255,255,0.08);
+  --border2: rgba(255,255,255,0.15);
+  --primary: #00BCD4;
+  --primary-d: #009CAE;
+  --primary-glow: rgba(0, 188, 212, 0.18);
   --blue: #4A9EFF;
   --green: #10B981;
   --red: #EF4444;
@@ -93,9 +93,9 @@ html, body {
   --surface: var(--bg-card);
   --input-bg: var(--bg-el);
   --blue: #2563EB;
-  --green: #059669;
+  --green: #10B981;
   --red: #DC2626;
-  --yellow: #D97706;
+  --yellow: #F5A623;
   --purple: #7C3AED;
   --shadow-card: 0 4px 16px rgba(0,0,0,0.04);
 }
@@ -443,7 +443,7 @@ html, body {
 .chip-filters { display: flex; gap: 8px; padding: 4px 16px 12px; overflow-x: auto; }
 .chip-filters::-webkit-scrollbar { display: none; }
 .chip { padding: 6px 14px; border-radius: 20px; border: 1px solid var(--border2); background: none; color: var(--text2); font-size: 12px; font-weight: 500; cursor: pointer; white-space: nowrap; font-family: inherit; transition: all 0.2s; }
-.chip.active { background: var(--primary-glow); border-color: var(--primary); color: var(--primary); font-weight: 600; }
+.chip.active { background: rgba(245,166,35,0.1); border-color: var(--yellow); color: var(--yellow); font-weight: 600; }
 .project-card {
   margin: 0 16px 12px; background: var(--bg-card);
   border: 1px solid var(--border); border-radius: var(--radius);
@@ -456,6 +456,7 @@ html, body {
 .proj-type-badge.residential { background: rgba(16,185,129,0.15); color: var(--green); }
 .proj-status-dot { width: 8px; height: 8px; border-radius: 50%; }
 .active-dot { background: var(--green); box-shadow: 0 0 6px var(--green); }
+.primary-dot { background: var(--primary); box-shadow: 0 0 6px var(--primary); }
 .proj-name { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
 .proj-sub { font-size: 12px; color: var(--text2); margin-bottom: 10px; }
 .proj-progress-row { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }

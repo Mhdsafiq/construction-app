@@ -200,7 +200,7 @@
     <div class="worker-section-title">My Projects</div>
     <div id="wdProjectsList">
       <div class="project-card" onclick="navigateTo('projectDetailScreen')">
-        <div class="proj-card-top"><div class="proj-type-badge commercial">Commercial</div><div class="proj-status-dot active-dot"></div></div>
+        <div class="proj-card-top"><div class="proj-type-badge commercial">Commercial</div><div class="proj-status-dot primary-dot"></div></div>
         <h3 class="proj-name">Metro Towers Phase 2</h3>
         <p class="proj-sub">12 Floors · Duplex · Chennai, TN</p>
         <div class="proj-progress-row"><span class="proj-pct">72%</span><div class="proj-progress-bar"><div class="proj-progress-fill" style="width:72%"></div></div></div>
@@ -340,7 +340,7 @@
     <div class="project-card" onclick="navigateTo('projectDetailScreen')">
       <div class="proj-card-top">
         <div class="proj-type-badge commercial">Commercial</div>
-        <div class="proj-status-dot active-dot"></div>
+        <div class="proj-status-dot primary-dot"></div>
       </div>
       <h3 class="proj-name">Metro Towers Phase 2</h3>
       <p class="proj-sub">12 Floors · Duplex · Chennai, TN</p>
@@ -370,7 +370,7 @@
       </div>
       <h3 class="proj-name">Green Valley Complex</h3>
       <p class="proj-sub">8 Floors · Duplex · Madurai, TN</p>
-      <div class="proj-progress-row"><span class="proj-pct">91%</span><div class="proj-progress-bar"><div class="proj-progress-fill" style="width:91%;background:#FABB18"></div></div></div>
+      <div class="proj-progress-row"><span class="proj-pct">91%</span><div class="proj-progress-bar"><div class="proj-progress-fill" style="width:91%"></div></div></div>
       <div class="proj-footer">
         <div class="proj-dates"><svg viewBox="0 0 24 24" fill="none" stroke="#8B8FA8" stroke-width="2" width="13" height="13"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><span>Sep 2024 – Jun 2025</span></div>
         <div class="team-avatars"><div class="t-avatar" style="background:#F5A623">AK</div></div>
@@ -601,15 +601,107 @@
   <!-- Tab: Overview -->
   <div class="tab-pane active" id="tabOverview">
     <div class="screen-body pad">
+      
+      <!-- New: High-level dashboard -->
+      <div class="expense-overview-card" style="background: linear-gradient(135deg, var(--bg-el), var(--bg-el2)); border: 1px solid var(--border); border-radius: 16px; padding: 16px; margin-bottom: 24px;">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 16px;">
+          <div>
+            <p style="font-size:11px; color:var(--text2); text-transform:uppercase; letter-spacing:0.5px;">Total Spent (Till Date)</p>
+            <h2 style="font-size:24px; font-weight:800; color:var(--text); margin-top:2px;">₹ 45.2L <span style="font-size:12px; font-weight:500; color:var(--text3);">/ 80L</span></h2>
+          </div>
+          <div style="background:rgba(16,185,129,0.15); color:var(--green); padding:6px 10px; border-radius:10px; font-size:12px; font-weight:700;">
+            Under Budget
+          </div>
+        </div>
+        
+        <p style="font-size:12px; font-weight:600; color:var(--text2); margin-bottom:10px;">Project Completion Progress</p>
+        <div class="line-chart-wrap" style="height: 80px; position: relative; margin-bottom: 8px;">
+           <svg viewBox="0 0 200 60" preserveAspectRatio="none" style="width:100%; height:100%; overflow:visible;">
+             <!-- grid lines -->
+             <line x1="0" y1="60" x2="200" y2="60" stroke="var(--border)" stroke-width="1"></line>
+             <line x1="0" y1="30" x2="200" y2="30" stroke="var(--border)" stroke-width="1" stroke-dasharray="2,2"></line>
+             <!-- the line -->
+             <polyline points="0,55 40,45 80,48 120,30 160,20 200,10" fill="none" stroke="var(--primary)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></polyline>
+             <!-- gradient under line -->
+             <polygon points="0,60 0,55 40,45 80,48 120,30 160,20 200,10 200,60" fill="var(--primary-glow)"></polygon>
+             <!-- dots -->
+             <circle cx="0" cy="55" r="3" fill="var(--primary)" stroke="var(--bg-el)" stroke-width="2"></circle>
+             <circle cx="40" cy="45" r="3" fill="var(--primary)" stroke="var(--bg-el)" stroke-width="2"></circle>
+             <circle cx="80" cy="48" r="3" fill="var(--primary)" stroke="var(--bg-el)" stroke-width="2"></circle>
+             <circle cx="120" cy="30" r="3" fill="var(--primary)" stroke="var(--bg-el)" stroke-width="2"></circle>
+             <circle cx="160" cy="20" r="3" fill="var(--primary)" stroke="var(--bg-el)" stroke-width="2"></circle>
+             <circle cx="200" cy="10" r="4" fill="white" stroke="var(--primary)" stroke-width="2"></circle>
+           </svg>
+        </div>
+        <div style="display:flex; justify-content:space-between; font-size:10px; color:var(--text3); font-weight:600;">
+          <span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span style="color:var(--primary)">Jun (72%)</span>
+        </div>
+      </div>
+
+      <!-- New: Daily Expense Filters -->
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+        <h4 style="font-size:14px; font-weight:700; color:var(--text);">Daily Expenses</h4>
+        <div class="date-filter-box" style="display:flex; align-items:center; background:var(--bg-card); border:1px solid var(--border); border-radius:10px; padding:6px 10px; gap:6px; cursor:pointer;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" width="14" height="14"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <input type="date" value="2026-06-11" style="background:transparent; border:none; color:var(--text); font-size:12px; outline:none; font-family:inherit; font-weight:600; cursor:pointer;" color-scheme="dark">
+        </div>
+      </div>
+
+      <div style="margin-bottom:32px; display:flex; flex-direction:column; gap:10px;">
+        <!-- Card 1: Salaries & Wages -->
+        <div class="expense-card" style="margin-bottom:0;">
+          <div class="exp-icon-wrap" style="background:rgba(74,158,255,0.15); color:var(--blue);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div>
+          <div class="exp-info">
+            <p class="exp-title">Salaries & Wages</p>
+            <p class="exp-meta">Paid to 15 Labours & 2 Engineers</p>
+            <p class="exp-date">Direct Cash & UPI</p>
+          </div>
+          <div class="exp-amount" style="color:var(--text);">₹14,500</div>
+        </div>
+
+        <!-- Card 2: Vendor Payments -->
+        <div class="expense-card" style="margin-bottom:0;">
+          <div class="exp-icon-wrap" style="background:rgba(245,166,35,0.15); color:var(--yellow);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 17 22 12"></polyline></svg></div>
+          <div class="exp-info">
+            <p class="exp-title">Vendor Payments</p>
+            <p class="exp-meta">Ramco Cements (200 Bags)</p>
+            <p class="exp-date">Bank Transfer</p>
+          </div>
+          <div class="exp-amount" style="color:var(--text);">₹68,000</div>
+        </div>
+
+        <!-- Card 3: Transport & Logistics -->
+        <div class="expense-card" style="margin-bottom:0;">
+          <div class="exp-icon-wrap" style="background:rgba(139,92,246,0.15); color:var(--purple);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg></div>
+          <div class="exp-info">
+            <p class="exp-title">Transport</p>
+            <p class="exp-meta">Material unload & Truck hire</p>
+            <p class="exp-date">Cash</p>
+          </div>
+          <div class="exp-amount" style="color:var(--text);">₹4,500</div>
+        </div>
+
+        <!-- Card 4: Petty Cash / Tea Snacks -->
+        <div class="expense-card" style="margin-bottom:0;">
+          <div class="exp-icon-wrap" style="background:rgba(16,185,129,0.15); color:var(--green);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg></div>
+          <div class="exp-info">
+            <p class="exp-title">Tea & Snacks</p>
+            <p class="exp-meta">Evening refreshments</p>
+            <p class="exp-date">Petty Cash</p>
+          </div>
+          <div class="exp-amount" style="color:var(--text);">₹450</div>
+        </div>
+      </div>
+
       <div class="section-head"><h4>Project Stages</h4></div>
-      <div class="timeline-container" style="padding:12px; background:var(--surface); border-radius:12px; border:1px solid var(--border); margin-bottom:24px;">
+      <div class="timeline-container" style="padding:12px; background:var(--bg-card); border-radius:12px; border:1px solid var(--border); margin-bottom:24px;">
         <div style="display:flex; flex-direction:column; gap:16px; position:relative;">
           <!-- Timeline line -->
           <div style="position:absolute; left:11px; top:12px; bottom:12px; width:2px; background:var(--border);"></div>
           
           <!-- Stage 1 -->
           <div style="display:flex; gap:12px; position:relative; z-index:1;">
-            <div style="width:24px; height:24px; border-radius:50%; background:var(--success); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+            <div style="width:24px; height:24px; border-radius:50%; background:var(--green); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
               <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" width="14" height="14"><polyline points="20 6 9 17 4 12"/></svg>
             </div>
             <div>
@@ -642,7 +734,7 @@
       </div>
 
       <div class="section-head"><h4>Team Members</h4><button class="text-link-btn" data-roles="admin,project_manager" style="pointer-events: auto; position: relative; z-index: 10;" onclick="openSheet('assignTeamSheet')">+ Assign</button></div>
-      <div class="team-member-card" style="align-items:center;">
+      <div class="team-member-card" style="align-items:center; background:var(--bg-card); border:1px solid var(--border); border-radius:12px; padding:12px; margin-bottom:10px;">
         <div class="avatar-md" style="background:#4A9EFF">RK</div>
         <div class="tm-info" style="flex:1;">
           <p class="tm-name">Raj Kumar</p>
